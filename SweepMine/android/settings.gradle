@@ -1,0 +1,3 @@
+rootProject.name = 'SweepMine'
+
+include ':app'
