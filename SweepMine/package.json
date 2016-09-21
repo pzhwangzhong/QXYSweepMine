@@ -8,6 +8,7 @@
   "dependencies": {
     "react": "15.3.1",
     "react-native": "0.32.0",
+    "react-native-code-push": "^1.14.6-beta",
     "react-native-tab-navigator": "^0.3.3",
     "react-timer-mixin": "^0.13.3"
   }

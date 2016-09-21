@@ -7,6 +7,8 @@ import {
     Image,
     TouchableOpacity,
     Navigator,
+// 让一些js的操作在过渡动画完成之后执行,保证动画的流畅性
+    InteractionManager
 } from 'react-native';
 
 // 导入外部json数据
@@ -126,13 +128,16 @@ var Home = React.createClass({
 
         // 如果为空,则直接返回
         if (component==null)return;
-        // 跳转
-        this.props.navigator.push({
-            // 要跳转的版块
-            component:component,
-            title:'扫雷',
+        InteractionManager.runAfterInteractions(()=>{
+            // 跳转
+            this.props.navigator.push({
+                // 要跳转的版块
+                component:component,
+                title:'扫雷',
 
+            });
         });
+
 
 
     },
